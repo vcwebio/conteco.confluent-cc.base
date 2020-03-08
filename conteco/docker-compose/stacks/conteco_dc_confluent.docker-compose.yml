@@ -4,7 +4,7 @@ services:
 
 # START SERVICE confluent-cc.base
   confluent-cc:
-    image: ${CONTECO_REGISTRY}${CONTECO_REALM}/${CONTECO_ECOSYSTEM}.confluent-cc.base:5.4.0
+    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.confluent-cc.base:5.4.0
     environment: [${CONTECO_DC_CONFLUENT_ENVIRONMENT}]
     command: [${CONTECO_DC_CONFLUENT_COMMAND}]
     volumes: [${CONTECO_DC_CONFLUENT_VOLUMES}]
