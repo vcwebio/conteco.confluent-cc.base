@@ -2,7 +2,7 @@
 
 # START CONFIGURATION
 DOLLAR='$'
-export CONTECO_DC_GLOBAL_STACKS="confluent-cc.base"
+export CONTECO_DC_GLOBAL_STACKS="confluent_cc.base"
 export CONTECO_DC_GLOBAL_STACKNAMES="conteco_dc_confluent"
 export CONTECO_DC_GLOBAL_BOOTSTACKS="conteco_dc_confluent"
 export CONTECO_DC_GLOBAL_RUNSTACKS=""

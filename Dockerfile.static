@@ -1,6 +1,6 @@
 ##### BEGIN image.base/Dockerfile/image-header #####
 FROM vcwebio/conteco.image.wrapper AS wrapper
-FROM vcwebio/conteco.external.confluent-cc:5.4.0 AS base
+FROM vcwebio/conteco.external.confluent_cc:5.4.0 AS base
 ##### END image.base/Dockerfile/image-header #####
 
 ##### BEGIN image.base/Dockerfile/conteco #####
@@ -16,26 +16,26 @@ COPY ./ /conteco/repo/
 
 ##### BEGIN image/Dockerfile/build-instructions #####
 ENV CONTECO_ENTRYPOINT "/etc/confluent/docker/run"
-COPY ./conteco/configs/etc/kafka/server.properties /etc/kafka/server.properties
+#COPY ./conteco/configs/etc/kafka/server.properties /etc/kafka/server.properties
 ##### END image/Dockerfile/build-instructions #####
 
 ##### BEGIN image.base/Dockerfile/env-labels-footer #####
 ENV CONTECO_REALM="vcwebio" \
     CONTECO_ECOSYSTEM="conteco" \
-    CONTECO_TYPE="confluent-cc" \
+    CONTECO_TYPE="confluent_cc" \
     CONTECO_NAME="base" \
     CONTECO_TAG="5.4.0" \
-    CONTECO_BASE="external.confluent-cc:5.4.0" \
+    CONTECO_BASE="external.confluent_cc:5.4.0" \
     CONTECO_BUILD="image-base"
 LABEL io.vcweb.schema-version="1.0" \
       io.vcweb.realm="vcwebio" \
       io.vcweb.ecosystem="conteco" \
-      io.vcweb.type="confluent-cc" \
+      io.vcweb.type="confluent_cc" \
       io.vcweb.name="base" \
       io.vcweb.tag="5.4.0" \
-      io.vcweb.base="external.confluent-cc:5.4.0" \
+      io.vcweb.base="external.confluent_cc:5.4.0" \
       io.vcweb.build="image-base" \
-      io.vcweb.label="confluent-cc.base - ContEco" \
+      io.vcweb.label="confluent_cc.base - ContEco" \
       io.vcweb.description="Confluent Control Center Base image, with configuration changes." \
-      io.vcweb.docker.cmd.help="docker run vcwebio/conteco.confluent-cc.base --help" 
+      io.vcweb.docker.cmd.help="docker run vcwebio/conteco.confluent_cc.base --help"
 ##### END image.base/Dockerfile/env-labels-footer #####

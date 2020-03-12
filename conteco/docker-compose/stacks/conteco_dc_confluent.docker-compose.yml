@@ -2,9 +2,9 @@
 version: '3'
 services:
 
-# START SERVICE confluent-cc.base
-  confluent-cc:
-    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.confluent-cc.base:5.4.0
+# START SERVICE confluent_cc.base
+  confluent_cc:
+    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.confluent_cc.base:5.4.0
     environment: [${CONTECO_DC_CONFLUENT_ENVIRONMENT}]
     command: [${CONTECO_DC_CONFLUENT_COMMAND}]
     volumes: [${CONTECO_DC_CONFLUENT_VOLUMES}]
@@ -20,7 +20,7 @@ services:
           cpus: '${CONTECO_DC_CONFLUENT_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${CONTECO_DC_CONFLUENT_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
       labels: [${CONTECO_DC_CONFLUENT_DEPLOY_LABELS}]
-# END SERVICE confluent-cc.base
+# END SERVICE confluent_cc.base
 
 volumes: {${CONTECO_STACKPREFIX}_confluent_volume: { external: true }}
 networks: {${CONTECO_NETWORKLOCAL}_overlay: { external: true }}

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-export CONTECO_LABEL="confluent-cc.base - ContEco"
+export CONTECO_LABEL="confluent_cc.base - ContEco"
 export CONTECO_DESCRIPTION="Confluent Control Center Base image, with configuration changes."
 
-export CONTECO_TYPE="confluent-cc"
+export CONTECO_TYPE="confluent_cc"
 export CONTECO_NAME="base"
 export CONTECO_TAG="5.4.0"
 
-export CONTECO_BASE="external.confluent-cc:5.4.0"
+export CONTECO_BASE="external.confluent_cc:5.4.0"
 export CONTECO_BUILD="image-base"
