@@ -1,6 +1,6 @@
 # `confluent_cc.base` - ContEco
 
-Confluent Kafka Base image, with configuration changes.
+Confluent Control Center Base image, with configuration changes.
 See `conteco.docs.overview` for more information on the ContEco ecosystem.
 
 ## Configuration Changes
