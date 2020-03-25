@@ -140,15 +140,15 @@ services:
       KSQL_CONSUMER_INTERCEPTOR_CLASSES: "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor"
       KSQL_KSQL_CONNECT_URL: "http://connect:8083"
 
-  ksql-cli:
-    image: confluentinc/cp-ksql-cli:5.4.0
-    container_name: ksql-cli
-    depends_on:
-      - broker
-      - connect
-      - ksql-server
-    entrypoint: /bin/sh
-    tty: true
+#  ksql-cli:
+#    image: confluentinc/cp-ksql-cli:5.4.0
+#    container_name: ksql-cli
+#    depends_on:
+#      - broker
+#      - connect
+#      - ksql-server
+#    entrypoint: /bin/sh
+#    tty: true
 
   rest-proxy:
     image: vcwebio/conteco.kafka_rest.base:5.4.0
